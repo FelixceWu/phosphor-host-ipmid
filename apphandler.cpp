@@ -649,6 +649,7 @@ ipmi::RspType<uint8_t,  // Device ID
                 log<level::ERR>("Device ID JSON parser failure");
                 return ipmi::responseUnspecifiedError();
             }
+	    devId.manufId = 65536;
         }
         else
         {
