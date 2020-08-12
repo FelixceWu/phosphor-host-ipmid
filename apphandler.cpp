@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <systemd/sd-bus.h>
 #include <unistd.h>
+#include <iostream>
 
 #include <algorithm>
 #include <app/channel.hpp>
@@ -650,6 +651,7 @@ ipmi::RspType<uint8_t,  // Device ID
                 return ipmi::responseUnspecifiedError();
             }
 	    devId.manufId = 65536;
+            std::cout << __FUNCTION__ << " entered! " << std::endl;
         }
         else
         {
